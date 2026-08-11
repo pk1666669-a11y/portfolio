@@ -1,15 +1,329 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <tittle>Prashant Kumar - portfolio</tittle>
-  </head>
-  <body style="text-align : center; font-family: Arial; background: lightblue;">
-    <h1>Namaste! Main Prashant Kumar Hun</h1>
-    <h2>BCA - Data Science Graduate</h2>
-    <p> Mujhe Data Analyst ki job Chahiye</p>
-    <p>Skills: Python, Html, CSS, Excel </p>
-    <button style="padding: 10px 20px; background: blue; color: white;">Hire Me</button>
-    <br></br>
-    <a href="#">About Me</a> | <a href="#">Contact</a> | <a href="#">Projects</a>
-  </body>
+<head>
+    <title>Prashant Kumar | Data Science Developer</title>
+    <style>{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    color: white;
+}
+nav{
+    background: rgba(30,30,46,0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+nav a{
+    color: #00ff88;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover{color: white; text-shadow: 0 0 10px #00ff88;}
+
+.hero{
+    text-align: center;
+    padding: 180px 20px 100px;
+}
+.hero h1{
+    font-size: 70px;
+    background: linear-gradient(90deg, #00ff88, #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero p{font-size: 22px; margin: 20px 0;}
+.btn{
+    background: linear-gradient(90deg, #000000, #00ccff);
+    color: #0a0a0a;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn:hover{transform: scale(1.1); box-shadow: 0 0 20px #00ff88;}
+
+section{padding: 100px 50px; text-align: center;}
+section h2{font-size: 45px; margin-bottom: 40px; color: #00ff88;}
+
+.projects{display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;}
+.card{
+    background: rgba(30,30,46,0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,255,136,0.3);
+    padding: 30px;
+    border-radius: 20px;
+    width: 320px;
+    transition: 0.4s;
+}
+.card:hover{transform: translateY(-10px); box-shadow: 0 0 30px #00ff88;}
+footer{background: rgba(30,30,46,0.8); text-align: center; padding: 20px; margin-top: 50px;
+}
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid #00ff88;
+  margin-top: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 20px #00ff88;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* ye 2 line photo ko center kar degi */
+}
+card-header {
+    margin-bottom: 15px;
+}
+ .tag {
+    background: rgba(0,255,136,0.3);
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 8px;
+}
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: left;
+}
+.features li {
+    padding: 5px 0;
+    color: #aaa;
+}
+.features li::before {
+    content: "  ";
+    color: #00ff88;
+}
+.card-buttons {
+    display: flex;
+    gap:    15px;
+    margin-top: 20px;
+}
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color:#00ff88;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #00ff88;
+  color: #000;
+  font-weight: bold;
+  border: 2px solid 
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #00ff88;
+  color: #00ff88;
+}
+
+.btn-secondary:hover {  /* yahan theek kar diya */
+  background: #00ff88;
+  color: #000;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px #00ff88;
+  transform: translateY(-2px);
+}
+
+.card-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+html {  
+    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    justify-content: center;
+}
+.card {
+    background: #111;
+    border: 1px solid #00ff88;
+    border-radius: 15px;
+    padding: 25px;
+    transition: transform 0.3s;
+    min-height: 400px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00ff88;
+}
+.tag {
+    background: #00ff88;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #000000;
+}
+
+.btn-primary {
+    background: #00ff88;
+    color: #000;
+    box-shadow: 0 0 10px #00ff88;
+}
+.btn-secondary {
+    background: transparent;
+    color: #00ff88;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+.card {
+    background: #111;
+    border: 1px solid #00ff88;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+  </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+    <!-- HERO SECTION -->
+    <div class="hero" id="home">
+        <h1>Hi, I'm  <span id="typing"></span></h1>
+        <img src="prashant.jpg" alt="Prashant Kumar" class="profile-pic">
+        <p>BCA Data Science | Python Developer | ML Enthusiast | UI/UX Enthusiast</p>
+        <button class="btn" onclick="window.open('https://wa.me/918796040139')">HIRE ME</button>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>ABOUT ME</h2>
+        <p>Hi, I'm Prashant Kumar! I have completed my BCA in Data Science from Ghaziabad, India. 
+           I'm a Python Developer and Data Enthusiast who loves working with data, building dashboards, and creating smart solutions.
+           My core skills include Python, Data Analysis with Pandas, Data Visualization, SQL, and Web Development with HTML, CSS, JS.
+           Let's build something amazing with data!</p>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+     <section id="projects">
+  <h2 style="text-align:center; color:#00ff88; font-size:40px; margin-bottom:40px;">MY PROJECTS</h2>
+  
+  <div class="projects">
+
+    <!-- Card 1 -->
+    <div class="card">
+        <div><span class="tag">Python</span></div>
+        <h3>Python Calculator</h3>
+        <p>Ek simple calculator jo +, -, *, / sab karta hai. VS Code me banaya.</p>
+        <div class="card-buttons">
+            <a href="calculator.py" download class="btn btn-primary">View Code</a>
+            <a href="calculator.html" class="btn btn-secondary">Live Demo</a>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <div><span class="tag">Python</span> <span class="tag">Pandas</span> <span class="tag">Excel</span></div>
+        <h3>Data Analysis</h3>
+        <p>Excel data ko Python se analyze karke graph banaya. Sales report se insights nikale.</p>
+        <ul style="color:#aaa; text-align:left;">
+            <li>Data Cleaning with Pandas</li>
+            <li>Graphs with Matplotlib</li>
+            <li>Sales Trend Analysis</li>
+        </ul>
+        <div class="card-buttons">
+            <a href="data_analysis.py" download class="btn btn-primary">View Code</a>
+            <a href="data_analysis.html" class="btn btn-secondary">Live Demo</a>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div><span class="tag">HTML</span> <span class="tag">CSS</span></div>
+        <h3>Portfolio Website</h3>
+        <p>A fully responsive personal portfolio built to showcase skills, projects and contact.</p>
+        <ul style="color:#aaa; text-align:left;">
+            <li>Mobile First responsive design</li>
+            <li>Dark theme with neon glow effects</li>
+            <li>Smooth scroll navigation</li>
+        </ul>
+        <div class="card-buttons">
+            <a href="1index.html" class="btn btn-primary">Live Demo</a>
+            <a href="1index.html" class="btn btn-secondary">Source Code</a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>CONTACT ME</h2>
+        <p>Email: pk1666669@gmail.com</p>
+        <p>Phone: +91 8796040139</p>
+        <button class="btn" onclick="window.open('https://wa.me/918796040139')">HIRE ME</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Prashant Kumar. All rights reserved.</p>
+    </footer>
+    <script>
+        let i=0;
+        let txt="Prashant Kumar";
+        function type(){
+            if(i<txt.length){
+                document.getElementById("typing").innerHTML +=txt.charAt(i);
+                i++;
+                setTimeout(type,100);
+            }
+        }
+        type();
+    </script>
+</body>
 </html>

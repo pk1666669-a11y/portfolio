@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Python Calculator - Live Demo</title>
+<style>
+    body {
+        background: #0a0a0a;
+        color: #00ff88;
+        font-family: 'Segoe UI', Arial;
+        text-align: center;
+        padding: 50px;
+    }
+    .calc-box {
+        background: #1a1a1a;
+        border: 2px solid #00ff88;
+        border-radius: 15px;
+        padding: 30px;
+        width: 350px;
+        margin: auto;
+    }
+    
+    input {
+        padding: 12px;
+        margin: 10px;
+        width: 140px;
+        font-size: 16px;
+        background: #000;
+        color: #00ff88;
+        border: 1px solid #00ff88;
+        border-radius: 8px;
+    }
+    button {
+        padding: 12px 20px;
+        margin: 8px;
+        font-size: 18px;
+        background: #00ff88;
+        color: #000;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    button:hover {
+        background: #00cc66;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 22px;
+        color: #00ff88;
+    }
+</style>
+</head>
+<body>
+<h1>===== PYTHON CALCULATOR =====</h1>
+<div class="calc-box">
+    <p>Operations: +  -  *  /</p>
+    <input id="num1" type="number" placeholder="Enter first number">
+    <input id="num2" type="number" placeholder="Enter second number">
+    <br>
+    <button onclick="calc('+')">+</button>
+    <button onclick="calc('-')">-</button>
+    <button onclick="calc('*')">*</button>
+    <button onclick="calc('/')">/</button>
+    <h2 id="result">Result: </h2>
+</div>
+
+<script>
+function calc(op){
+    let a = parseFloat(document.getElementById('num1').value);
+    let b = parseFloat(document.getElementById('num2').value);
+    let res;
+    
+    if(op == '+'){
+        res = a + b;
+    }
+    else if(op == '-'){
+        res = a - b;
+    }
+    else if(op == '*'){
+        res = a * b;
+    }
+    else if(op == '/'){
+        if(b != 0){
+            res = a / b;
+        } else {
+            res = "Error: 0 se divide nahi ho sakta";
+        }
+    }
+    document.getElementById('result').innerText = 'Result: ' + res;
+}
+</script>
+</body>
+</html>
